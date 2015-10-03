@@ -1,0 +1,58 @@
+{
+  "name": "intervention-manager",
+  "version": "0.0.0",
+  "description": "Intervention Manager",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cfratila/InterventionsManager.git"
+  },
+  "main": "app.js",
+  "scripts": {
+    "watch": "watchify app.js -o public/js/bundle.js -v",
+    "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
+    "build": "npm run browserify ",
+    "start": "npm install"
+  },
+  "author": "Carmen Fratila",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.9.7",
+    "express-handlebars": "~1.1.0",
+    "mongoose": "^3.8.23",
+    "node-jsx": "~0.11.0",
+    "react-dom": "0.14.0-rc1",
+    "react-bootstrap": "~0.25.2"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.x",
+    "browser-sync": "^2.7.13",
+    "browserify": "~6.0.3",
+    "nodemon": "^1.2.1",
+    "reactify": "~0.14.0",
+    "uglify-js": "~2.4.15",
+    "watchify": "^3.1.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.x",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "lodash": "^3.10.0",
+    "morgan": "^1.6.1",
+    "react-document-title": "^1.0.2",
+    "react-router": "^1.0.0-rc1",
+    "reflux": "^0.2.9",
+    "run-sequence": "^1.1.1",
+    "superagent": "^1.2.0"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}
